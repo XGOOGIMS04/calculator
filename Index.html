@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>계산기 만들기</title>
+        <link rel="stylesheet" href="./index.css" />
+        <script src="./index.js" defer></script>
+        <link href="https://fonts.googleapis.com/css2?family=Abel&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- 계산 결과 -->
+            <div id="box1">
+                <div id="process_box">
+                    <div id="process">
+                    </div>
+                </div>
+                <div id="result_box">
+                    <div id="result">
+                    </div>
+                </div>
+            </div>
+            <!-- 버튼이 올 구역 -->
+            <div id="buttonsBox">
+                <div class="rows">
+                    <button class="btn_allClear">AC</button>
+                    <button class="btn_clear">&lt;</button>
+                    <button class="btn_result">=</button>
+                </div>
+                <div class="rows">
+                    <button type="button" class="btn">7</button>
+                    <button type="button" class="btn">8</button>
+                    <button type="button" class="btn">9</button>
+                    <button type="button" class="btn_operator">&times;</button>
+                </div>
+                <div class="rows">
+                    <button type="button" class="btn">4</button>
+                    <button type="button" class="btn">5</button>
+                    <button type="button" class="btn">6</button>
+                    <button type="button" class="btn_operator">&divide;</button>
+                </div>
+                <div class="rows">
+                    <button type="button" class="btn">1</button>
+                    <button type="button" class="btn">2</button>
+                    <button type="button" class="btn">3</button>
+                    <button type="button" class="btn_operator">&#45;</button>
+                </div>
+                <div class="rows">
+                    <button type="button" class="btn_operator">&#37;</button>
+                    <button type="button" class="btn">0</button>
+                    <button type="button" class="btn_operator">.</button>
+                    <button type="button" class="btn_operator">&#43;</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

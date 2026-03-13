@@ -1,0 +1,83 @@
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#wrap {
+    width: 450px;
+    height: 700px;
+    background-color: #a4c3b2;
+    padding: 20px;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+}
+#box1 {
+    background-color: #cce3de;
+    /* border: 2px solid black; */
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+#box1 #process_box {
+    padding: 12px 12px 0 12px;
+}
+#box1 #process_box #process { 
+    width: 100%;
+    height: 80px; /* 게산이 길어질 것들 대비해서 결과보다 좀 더 크게 만듬 */
+    background-color: #eaf4f4;
+}
+/* 계산 숫자 넣을 곳 */
+#box1 #process input {
+    width: 35%;
+    height: 40px;
+}
+#box1 #result_box {
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px;
+}
+#box1 #result_box #result {
+    width: 200px;
+    height: 46px;
+    background-color: #f6fff8;
+}
+#buttonsBox {
+    width: 100%;
+    height: 502px;
+    margin-top: 25px;
+    background-color: #eaf4f4;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.rows {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+/* 버튼 레이아웃 */
+.rows [class*="btn"] {
+    background-color: #fff;
+    color: #284b63;
+    font-size: 20px;
+    /* font-family: "Abel", sans-serif; */
+    font-weight: 900;
+    border-color: #eaf4f4;
+    border-radius: 40%;
+}
+
+.rows [class*="btn"]:active {
+    background-color: #bfdecd;
+}
+
+button {
+    width: 92px;
+    height: 80px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
