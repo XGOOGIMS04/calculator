@@ -26,12 +26,11 @@ result.addEventListener('click', () => {
 
     expression = expression.replaceAll("×", "*");
     expression = expression.replaceAll("÷", "/");    
-    expression = expression.replaceAll(".", "."); 
     expression = expression.replaceAll("%", "/100");   
 
     try {
         let calc = eval(expression);
-        calcResult.textContent = calc;
+        calcResult.textContent = calc.toLocaleString("ko-KR"); // 3자리 마다 콤마찍기
     } catch {
         calcResult.textContent = "계산오류";
     }
