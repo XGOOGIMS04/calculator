@@ -27,6 +27,7 @@ body {
     height: 80px; /* 게산이 길어질 것들 대비해서 결과보다 좀 더 크게 만듬 */
     /* background-color: #eaf4f4; */
     font-size: 27px;
+    word-break:break-all;
 }
 /* 계산 숫자 넣을 곳 */
 #box1 #process input {
@@ -35,15 +36,14 @@ body {
 }
 #box1 #result_box {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     padding: 12px;
 }
 #box1 #result_box #result {
-    width: 200px;
+    width: 100%;
     height: 46px;
     /* background-color: #f6fff8; */
     font-size: 40px;
-    text-align: center;
 }
 #buttonsBox {
     width: 100%;
