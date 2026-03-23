@@ -11,21 +11,31 @@ let calcResult = document.querySelector('#result');
 
 numbers.forEach((btn) => {
     btn.addEventListener('click', () => {
+        let current_num = process_num.textContent // 현재 문자열 가져오기
+        let list = current_num.split(/[\+\-\*\/%×÷]/); // 정규식을 사용하여 연산자 기준으로 나눔
+        let last = list.at(-1); // 마지막 요소 추출 
+        console.log(last.length); // 마지막 요소 길이 확인
+        if (last.length >= 9) return;// 10자리 되면 무시 
         process_num.textContent += btn.textContent; // 누른 숫자가 process 박스 안에 보임. 이어붙이기
     });
 })
 
 operate.forEach((oper) => {
     oper.addEventListener('click', () => {
-        process_num.textContent += oper.textContent; // 연산자가 div박스 안에 이어붙옂ㅁ
+        let value = oper.textContent;
+        let display = value;
+        if (value == "×") {
+            value = "*";
+        }
+        if (value == "÷") {
+            value = "/";
+        }
+        process_num.textContent += display;
     });
 })
 
 result.addEventListener('click', () => {
-    let expression = process_num.textContent;
-
-    expression = expression.replaceAll("×", "*");
-    expression = expression.replaceAll("÷", "/");    
+    let expression = process_num.textContent; // 전체 문자열    
     expression = expression.replaceAll("%", "/100");   
 
     try {
